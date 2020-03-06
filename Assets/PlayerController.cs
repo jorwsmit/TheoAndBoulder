@@ -14,6 +14,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        player.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed * Time.deltaTime);
+        player.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
     }
 }

@@ -6,9 +6,9 @@ public class CameraController : MonoBehaviour
     public float smoothingAmmount = 0.125f;
     public Vector3 cameraOffset;
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         //transform.position = target.position + cameraOffset;
-        transform.position = Vector3.Lerp(transform.position, target.position + cameraOffset, smoothingAmmount);
+        transform.position = Vector3.Lerp(transform.position, target.position + cameraOffset, smoothingAmmount * Time.deltaTime);
     }
 }
